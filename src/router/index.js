@@ -4,7 +4,7 @@ import index from '@/pages/index'
 import preloader from '@/pages/preloader'
 import settings from '@/pages/settings'
 import auth from '@/pages/welcomePages/auth'
-import startCreen from '@/pages/welcomePages/startCreen'
+import startSreen from '@/pages/welcomePages/startSreen'
 import newConf from '@/pages/configurations/newConf'
 import newConfErr from '@/pages/configurations/newConfErr'
 import newConfInfo from '@/pages/configurations/newConfInfo'
@@ -33,9 +33,9 @@ export default new Router({
       name: 'auth',
       component: auth,
     },{
-      path: '/startCreen',
-      name: 'startCreen',
-      component: startCreen,
+      path: '/startSreen',
+      name: 'startSreen',
+      component: startSreen,
     },{
       path: '/newConf',
       name: 'newConf',
