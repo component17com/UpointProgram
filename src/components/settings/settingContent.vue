@@ -76,15 +76,55 @@
           </el-input>
         </div>
       </div>
-      <div class="settingContent__section-item">
+      <!--Item table-->
+      <div class="settingContent__section-item settingContent__section-table">
         <div class="settingItem__desc">
           <h3 class="settingItem__desc-title">Данные для входа</h3>
           <p class="settingItem__desc-text">Запомнить данные для входа в конфигурацию</p>
         </div>
         <div class="settingItem__func">
-          <el-input placeholder="Please input" class="input-with-select">
-            <el-button slot="append" icon="mdi mdi-folder"></el-button>
-          </el-input>
+          <el-table
+            :data="tableData"
+            stripe
+            style="width: 100%"
+            border>
+            <el-table-column
+              prop="name"
+              label="Название"
+            width="150">
+              <template slot-scope="scope">
+                <div class="">{{ scope.row.name}}</div>
+              </template>
+            </el-table-column>
+            <el-table-column
+              label="Namespace">
+              <template slot-scope="scope">
+                <div class="">{{ scope.row.nameSpace}}</div>
+              </template>
+            </el-table-column>
+            <el-table-column
+              prop="version"
+              label="Версия"
+              width="65">
+            </el-table-column>
+            <el-table-column
+              label="Конфигурация"
+              width="155">
+              <template slot-scope="scope">
+                <el-select></el-select>
+              </template>
+            </el-table-column>
+            <el-table-column
+              label="Действия"
+              width="100"
+              cell-class-name="test">
+              <template slot-scope="scope" >
+                <el-button title="Опубликовать модуль"><i class="mdi mdi-folder-upload"></i></el-button>
+                <el-button title="Открыть папку модуля"><i class="mdi mdi-folder-outline"></i></el-button>
+                <el-button title="Удалить"><i class="mdi mdi-delete"></i></el-button>
+              </template>
+            </el-table-column>
+          </el-table>
         </div>
       </div>
     </div>
@@ -113,12 +153,29 @@
           label: 'Option5'
         }],
         value: '',
+        tableData: [{
+          name: 'Инвентаризация',
+          nameSpace: 'com.component17.inventory',
+          version: '1.1.1',
+        }, {
+          name: 'Номенклатура',
+          nameSpace: 'com.component17.namenclature',
+          version: '1.1.1',
+        }, {
+          name: 'Инвентаризация',
+          nameSpace: 'com.component17.inventory',
+          version: '1.1.1',
+        }, {
+          name: 'Номенклатура',
+          nameSpace: 'com.component17.namenclature',
+          version: '1.1.1',
+        }]
       }
     }
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .settingContent {
     display: flex;
     flex-direction: column;
@@ -177,6 +234,55 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+      }
+      /*-----Item Table----*/
+      .settingContent__section-table {
+        flex-wrap: wrap;
+        .settingItem__desc, .settingItem__func {
+          width: 100%;
+          .el-table {
+            td{
+              padding: 0;
+              overflow: hidden;
+            }
+            .cell{
+              display: flex;
+              align-items: center;
+              height: 100%;
+              padding: 5px 10px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              word-break: break-all;
+              box-sizing: border-box;
+            }
+            button {
+              padding: 0;
+              border: none;
+              transition: 0.3s ease all;
+              background-color: transparent;
+              margin-left: 10px;
+              width: 20px;
+              height: 20px;
+              &:hover{
+                .mdi{
+                  color: #241f2e;
+                }
+              }
+            }
+            button:first-child{
+              margin-left: 0;
+            }
+            .mdi {
+              color: #bbbbbb;
+              font-size: 16px;
+              transition: 0.3s ease;
+            }
+          }
+        }
+        .settingItem__func {
+          margin-top: 10px;
+        }
       }
     }
     /*----Alert----*/
