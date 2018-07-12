@@ -24,7 +24,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-image: url("../../static/images/UPoint/1_all_stars.svg"), linear-gradient(0deg, #3D354B 0%, #241F2E 100%);
+    background-image: url("../../../static/images/UPoint/1_all_stars.svg"), linear-gradient(0deg, #3D354B 0%, #241F2E 100%);
     background-position: center;
     background-size: contain;
     background-color: #241f2e;
@@ -47,7 +47,7 @@
       position: relative;
       &:after {
         position: absolute;
-        content: url("../../static/images/UPoint/call_spaceman.svg");
+        content: url("../../../static/images/UPoint/call_spaceman.svg");
         left: -300px;
         top: -300px;
         width: 463px;

@@ -9,8 +9,9 @@ import newConf from '@/pages/configurations/newConf'
 import newConfErr from '@/pages/configurations/newConfErr'
 import newConfInfo from '@/pages/configurations/newConfInfo'
 import newConfSetup from '@/pages/configurations/newConfSetup'
-import connectionError from '@/pages/connectionError'
-import pageError from '@/pages/pageError'
+import connectionError from '@/pages/errors/connectionError'
+import pageError from '@/pages/errors/pageError'
+import menuModules from '@/pages/menuModules'
 
 Vue.use(Router);
 
@@ -60,6 +61,10 @@ export default new Router({
       path: '/pageError',
       name: 'pageError',
       component: pageError,
+    },{
+      path: '/menuModules',
+      name: 'menuModules',
+      component: menuModules,
     }
   ]
 })

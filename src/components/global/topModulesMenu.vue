@@ -105,6 +105,7 @@
     display: flex;
     align-items: center;
     user-select: none;
+    z-index: 10;
     /*---Рабочий стол----*/
     .topModulesMenu__board{
       width: 100px;

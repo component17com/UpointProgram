@@ -190,7 +190,7 @@
       top: 100%;
       left: 0;
       right: 0;
-      z-index: 1;
+      z-index: 5;
       & > div{
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
         background-color: #ffffff;
@@ -262,10 +262,10 @@
     display: flex;
     align-items: center;
     button{
-        padding: 0 8px;
+        padding: 0 14px;
         background-color: transparent;
         border: none;
-        color: white;
+        color: #cccccc;
         position: relative;
         z-index: 1;
         transition: 0.3s all ease;
@@ -275,6 +275,7 @@
         font-size: 16px;
         &:hover{
           background-color: rgba(255, 255, 255, 0.2);
+          color: white;
         }
       }
   }
