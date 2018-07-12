@@ -3,7 +3,7 @@
     <draggable v-model="modules" :options="{group:'modules', animation:200}" class="modules-wrapper"
                :no-transition-on-drag="true" @start="dragStart" @end="dragEnd">
       <transition-group :name="!drag? 'list-complete' : null" :css="true">
-        <div v-for="(item, index) in modules" :key="index" class="menuModul">
+        <div v-for="(item, index) in modules" :key="index" class="menuModul" :title="item.name">
           <div class="menuModul-icon"><i class="mdi" :class="item.icon"></i></div>
           <div class="menuModul-title">{{item.name | sliceText(12)}}</div>
         </div>

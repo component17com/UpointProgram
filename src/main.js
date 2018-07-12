@@ -8,7 +8,7 @@ import '../static/index.min.css';
 import 'mdi/css/materialdesignicons.min.css';
 import lang from 'element-ui/lib/locale/lang/ru-RU';
 import draggable from 'vuedraggable';
-
+import VueChromeTabs from 'vue-chrome-tabs'
 //Components
 import uHeader from './components/global/uHeader';
 import topModulesMenu from './components/global/topModulesMenu';
@@ -40,8 +40,8 @@ Vue.filter('sliceText', (val, textLength) => {
 });
 
 
-Vue.config.productionTip = false
-
+Vue.config.productionTip = false;
+Vue.use(VueChromeTabs);
 /* eslint-disable no-new */
 
 Vue.use(ElementUI, {

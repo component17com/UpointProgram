@@ -14,9 +14,11 @@
     "element-ui": "^2.4.3",
     "mdi": "^2.2.43",
     "vue": "^2.5.2",
+    "vue-chrome-tabs": "^0.1.2",
     "vue-drag-drop": "^1.1.2",
     "vue-router": "^3.0.1",
-    "vuedraggable": "^2.16.0"
+    "vuedraggable": "^2.16.0",
+    "x-chrome-tabs": "^1.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
